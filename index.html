@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layouts</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+        @import url("https://fonts.gstatic.com");
+        @import url("https://fonts.googleapis.com");
+        @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+        html{
+            font-size: 62%;
+        }
+        body{
+            margin: 0;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10rem;
+        }
+        .hero{
+            background-color: #F3EED9;
+            height: 100vh;
+            
+        }
+        .title{
+            font-family: "Playfair Display", sans-serif;
+            font-size: 6rem;
+        }
+        .flex-row{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10%;
+        }
+        .flex-row-reverse{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;
+            gap: 10%;
+        }
+        
+        .flex-column{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .lorem{
+            font-family: "Roboto Display", sans-serif;
+            text-transform: uppercase;
+            font-weight: lighter;
+            letter-spacing: 5px;
+            font-size: 2rem;
+        }
+        .quality_title,.sub_title{
+            font-family: "Playfair Display", sans-serif;
+            font-size: 36px;
+        }
+        article,.theory>p{
+            font-family: "Roboto Regular", sans-serif;  font-size: 21px;
+            text-align: left;
+        }
+        .black{
+            color: #222C2A;
+        }
+        .bgblack{
+            background-color: #222C2A;
+        }
+        .white{
+            color:#F3EED9;
+        }
+        .brown{
+            color: #824936;
+        }
+        .bgbrown{
+            background-color: #824936;
+        }
+        @media (max-width:930px){
+            .custom>.container,.footer>.container{
+                flex-direction: column;
+            }
+        }
+        @media (max-width:1000px){
+            .container{
+                padding: 4rem;
+            }
+        }
+        @media (max-width:700px){
+            .content{
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero flex-row">
+        <div class="container">
+            <p class="lorem">
+                Lorem Ipsum sit
+            </p>
+            <h1 class="title brown">
+                Responsive layouts don't have to be a struggle
+            </h1>
+        </div>
+    </section>
+    <section class="quality flex-column">
+        <div class="container">
+            <h2 class="quality_title brown">
+                Quality Design
+            </h2>
+            <div class="content flex-row">
+                <article class="left_article">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi doloribus architecto, eos voluptatibus voluptatem quisquam odio a placeat id ipsa quasi iusto repellendus consequuntur ullam. Commodi recusandae iusto temporibus rerum.
+                </article>
+                <article class="right_article">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi doloribus architecto, eos voluptatibus voluptatem quisquam odio a placeat id ipsa quasi iusto repellendus consequuntur ullam. Commodi recusandae iusto temporibus rerum.
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="custom bgblack white">
+        <div class="container flex-row">
+            <div class="theory flex-column">
+                <h2 class="sub_title">
+                    Made custom for you
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, quia veniam ipsum eum exercitationem nobis, facere voluptate rerum doloribus delectus perferendis amet consectetur iste qui necessitatibus dicta fugiat, sed repellat!
+                </p>
+            </div>
+            <div class="img flex-row">
+                <img src="./image-01.jpg" alt="a man on mountains">
+            </div>
+        </div>
+    </section>
+    <section class="footer bgbrown white">
+        <div class="container flex-row-reverse">
+            
+            <div class="theory flex-column">
+                <h2 class="sub_title">
+                    Made custom for you
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, quia veniam ipsum eum exercitationem nobis, facere voluptate rerum doloribus delectus perferendis amet consectetur iste qui necessitatibus dicta fugiat, sed repellat!
+                </p>
+            </div>
+            <div class="img flex-row">
+                <img src="./image-01.jpg" alt="a man on mountains">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
